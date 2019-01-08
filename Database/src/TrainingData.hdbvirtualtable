@@ -1,0 +1,18 @@
+VIRTUAL TABLE "DataWareHouse.Database::TrainingData" AT "LocalFile"."<NULL>"."<NULL>"."Training_data.csv" REMOTE PROPERTY 'dataprovisioning_parameters'='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Parameters>
+<Parameter name="FORMAT">CSV</Parameter>
+<Parameter name="FORCE_FILENAME_PATTERN">Training_data.csv</Parameter>
+<Parameter name="PARTITIONS">0</Parameter>
+<Parameter name="CODEPAGE">utf-8</Parameter>
+<Parameter name="LOCALE">en_US</Parameter>
+<Parameter name="SKIP_HEADER_LINES">1</Parameter>
+<Parameter name="ROW_DELIMITER">\r\n</Parameter>
+<Parameter name="QUOTED_TEXT_CONTAIN_ROW_DELIMITER">false</Parameter>
+<Parameter name="COLUMN_DELIMITER">;</Parameter>
+<Parameter name="EXPONENTIAL">E</Parameter>
+<Parameter name="LENIENT">true</Parameter>
+<Parameter name="COLUMN">SalesOrderID;NVARCHAR(10);</Parameter>
+<Parameter name="COLUMN">OrderDate;DATE;</Parameter>
+<Parameter name="COLUMN">CustomerName;NVARCHAR(20);</Parameter>
+<Parameter name="COLUMN">SalesEuro;DECIMAL(10,2);</Parameter>
+</Parameters>' 

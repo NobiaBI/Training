@@ -1,0 +1,8 @@
+namespace DataWareHouse.Database.Tables;
+
+entity SalesTable1 {
+    key SalesOrderID : String(10) not null;
+        OrderDate    : LocalDate;
+        CustomerName : String(20);
+        SalesEuro    : Decimal(10, 2);
+};
