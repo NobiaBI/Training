@@ -1,0 +1,14 @@
+{
+	"Synonyms1": {
+		"object_owner": { 
+			"roles": [
+				"BW_GRANTOR"
+			]
+		},
+		"application_user": {
+			"roles": [
+				"BW_ACCESS"
+			]
+		}
+	}
+}
