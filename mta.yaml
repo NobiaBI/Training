@@ -1,0 +1,99 @@
+_schema-version: '2.0'
+ID: Training_exercise
+description: Training_exercise
+version: 0.0.1
+
+modules:
+ - name:  Training_exercise-DWF
+   type: dwf
+#   parameters:
+#      app-name: Training_exercise-DWF
+   path: DWF
+   requires:
+#      - name: Training_exercise-uaa
+      - name: Training_exercise-dws
+   properties:
+     memory: 256M
+
+ - name: Training_exercise-Backend
+   type: nodejs
+#   parameters:
+#      app-name: Training_exercise-Backend
+   path: Backend
+   requires:
+#      - name: Training_exercise-uaa
+      - name: Training_exercise-container
+      - name: Training_exercise-dws
+   properties:
+     memory: 512M
+     API_END_POINT: "${xs-api-url}"
+#     SAP_JWT_TRUST_ACL: "[{\"clientid\":\"*\",\"identityzone\":\"*\"}]"
+   provides:
+    - name:  Training_exercise-Backend
+      properties:
+       service_url: ${default-url}
+
+ - name: Training_exercise-Database
+   type: hdb
+#   parameters:
+#      app-name: Training_exercise-Database
+   path: Database
+   requires:
+    - name: Training_exercise-container
+      properties:
+        TARGET_CONTAINER: '~{hdi-container-name}'
+    - name: Synonyms1        
+   properties:
+     memory: 256M
+     HDI_DEPLOY_OPTIONS: { "auto_undeploy": true }
+
+
+resources:
+# - name: Training_exercise-uaa
+#   type: com.sap.xs.uaa
+#   parameters:
+#     service-name: Training_exercise-uaa
+#     service-plan: space
+#     config:
+#         xsappname: Training_exercise
+#         scopes:
+#          - name: $XSAPPNAME.TOE
+#            description: access for TOE
+#            grant-as-authority-to-apps:
+#             - dwf-toe
+#             - dwf-runtime
+#            granted-apps:
+#             - dwf-toe
+#             - dwf-runtime
+#         authorities:
+#          - $ACCEPT_GRANTED_AUTHORITIES
+#         role-templates:
+#           - name: User
+#             description: Access API
+#             scope-references:
+#              - $XSAPPNAME.TOE
+
+ - name: Training_exercise-dws
+   properties:
+      dwf-edw-client-name: ${service-name}
+#      dwf-edw-client-name: Training_exercise-dws
+#   parameters:
+#      service-name: Training_exercise-dws
+   type: com.sap.xs.dwf-edw-client
+ - name: Training_exercise-container
+   properties:
+      hdi-container-name: ${service-name}
+#      hdi-container-name: Training_exercise-container
+#   parameters:
+#      service-name: Training_exercise-container
+   type: com.sap.xs.hdi-container
+   parameters:
+     service-keys:
+     - name: dwf-monitor
+ - name: Synonyms1
+   type: org.cloudfoundry.existing-service
+    
+    
+    
+    
+    

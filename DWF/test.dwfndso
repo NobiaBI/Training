@@ -1,0 +1,57 @@
+{
+	"version": "1.0.0",
+	"hdiTarget": "hdicds",
+	"snapshots": false,
+	"elements": [
+		{
+			"queueAggregation": {},
+			"elements": [],
+			"name": "elements_1",
+			"type": "primitiveType",
+			"dataType": "String",
+			"objectType": "",
+			"length": 5000,
+			"scale": null,
+			"key": true,
+			"default": "",
+			"aggregation": "NOP"
+		},
+		{
+			"queueAggregation": {},
+			"elements": [],
+			"name": "elements_2",
+			"type": "primitiveType",
+			"dataType": "Integer",
+			"objectType": "",
+			"length": null,
+			"scale": null,
+			"key": false,
+			"default": "",
+			"aggregation": "NOP"
+		}
+	],
+	"activeData": {
+		"partitionSpec": "default"
+	},
+	"changeLog": {
+		"partitionSpec": "default"
+	},
+	"queues": [
+		{
+			"name": "inbound_queue_1",
+			"partitionSpec": "default"
+		}
+	],
+	"partitionSpec": {
+		"default": [
+			{
+				"type": "hash",
+				"elements": [
+					"elements_1"
+				],
+				"partitions": -1,
+				"expression": "GET_NUM_SERVERS()"
+			}
+		]
+	}
+}
