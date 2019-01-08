@@ -1,0 +1,8 @@
+TYPE "DataWareHouse.Database.Procedure::ProcOut"
+AS TABLE
+(       "SalesOrderID"  nvarchar(10),
+        "OrderDate"     date,
+        "CustomerName"  nvarchar(20),
+        "SalesEuro"     Decimal(10, 2),
+        "BigSaleFlag"  nvarchar(1)
+                )

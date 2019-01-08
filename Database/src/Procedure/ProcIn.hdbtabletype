@@ -1,0 +1,7 @@
+TYPE "DataWareHouse.Database.Procedure::ProcIn"
+AS TABLE
+(       "SalesOrderID"  nvarchar(10),
+        "OrderDate"     date,
+        "CustomerName"  nvarchar(20),
+        "SalesEuro"     Decimal(10, 2)
+                )

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="1248c2691f4884a11574e65d128f402d" name="LoadSales1" runtimeBehavior="BATCH_TASK">
+  <annotations key="sap.afm.layout" xmi:id="d983f858b98b6f18839e5eb9125b460a">
+    <annotations xmi:id="cec5d5318f10cdf06fed478b0dca2bb1" key="x" value="10">
+    </annotations>
+    <annotations xmi:id="e62b5e609568833b053611fa69e9ced5" key="y" value="10">
+    </annotations>
+    <annotations xmi:id="274461f67100c5277e5e4d1408795182" key="width" value="100">
+    </annotations>
+    <annotations xmi:id="124218e8dbd23d7e98b5de44e6c80c7b" key="height" value="84">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="6755531f025cf743439771a8e3597564" key="sap.afm.palette">
+    <annotations xmi:id="a1f5c57186cc50c0a8dd261ad23d387a" key="additions" value="">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="7c02d8f6854b92c7dbab07a4f75ffca4" key="sap.afm.nodeType" value="ContainerNode">
+  </annotations>
+  <annotations xmi:id="76b1aa0137358f1558487e14f5481591" key="sap.afm.nodeInputs">
+  </annotations>
+  <annotations xmi:id="e178bbe017dc69ce540f0cb57904f190" key="sap.afm.nodeOutputs">
+  </annotations>
+  <tableMappings xmi:id="114cc7694f2930dfb1e1e018bc535331" source="17add17827cf0666dec15b0079218d64" target="07d3f02743ccf553be32774e4c4d6afa">
+    <attributeMappings xmi:id="2ff179ae7acd8a9b1e4da63298ef5ba8" source="c71622fdd2dade261daf0b470118b45c" target="272934de9925b5caca806b3eb73688a4">
+    </attributeMappings>
+    <attributeMappings xmi:id="21c44e3585c2485003fe0158a4dd927c" source="f6a9f5f5f808595a505307e333461b70" target="9a9452c1255259d60b35b3557b5f739c">
+    </attributeMappings>
+    <attributeMappings xmi:id="db717091e653af375c57b811f33c8547" source="5084807a85c0445bd35b87b54a952acc" target="37c66c35f1d1eb5a4eb6a372ae31bfea">
+    </attributeMappings>
+    <attributeMappings xmi:id="c3f83b46cfaadce0f88c5d4186daa4c7" source="8356cc2beff4e00042878e60a90a8e16" target="ab85c480e0460b6520271d7f75902bd2">
+    </attributeMappings>
+  </tableMappings>
+  <nodes xmi:id="8f38b2c8f2c9b9577c45398d7bfaa8aa" name="TrainingData" catalogObjectName="DataWareHouse.Database::TrainingData" type="VIRTUAL_TABLE" xsi:type="flowgraph:DataNode" dataLayout="ROW">
+    <annotations key="sap.afm.layout" xmi:id="851fd35e4d6d8b910579f71d32dc8511">
+      <annotations xmi:id="6241238f6aa1539601ab3ddc7628c478" key="x" value="97">
+      </annotations>
+      <annotations xmi:id="2d0fdf3111cca88378b3adff3d9f04a9" key="y" value="186">
+      </annotations>
+      <annotations xmi:id="11b176e9157b7485d3be39742ce103a2" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="1b993ce97171b019667881332cd89d55" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="4fc360906dfc2506d1c801ec2b28485a" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="035cc60f7a60b6efbba3b87cdd216b6d" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="2b6cb5dd6e6cb233287b3fda8e13695e" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="a133e8bb7076d12832eeb5d8c66fc860" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="e5e84dc3310f875dd9b12fb395d7bd72" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="3b37944d363a2587cd114b75d10ca7d4" key="columns" value="[{&quot;name&quot;:&quot;PATH&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1024,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;b71013b5512093c08d8a01e1c8b7c4e8&quot;},{&quot;name&quot;:&quot;NAME&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1024,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;1199e1853f40e9565cfb85a242bcddd1&quot;},{&quot;name&quot;:&quot;ROWNUMBER&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;9bdd41cc41cdcee163ad29111d593100&quot;},{&quot;name&quot;:&quot;ERROR&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:1024,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;4889faae963f14151a160d43de233702&quot;},{&quot;name&quot;:&quot;PARTITION&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;510cce1ef132f4adae230f56a61f9c5e&quot;},{&quot;name&quot;:&quot;SalesOrderID&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;c71622fdd2dade261daf0b470118b45c&quot;},{&quot;name&quot;:&quot;OrderDate&quot;,&quot;type&quot;:&quot;DATE&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f6a9f5f5f808595a505307e333461b70&quot;},{&quot;name&quot;:&quot;CustomerName&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:20,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;5084807a85c0445bd35b87b54a952acc&quot;},{&quot;name&quot;:&quot;SalesEuro&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;length&quot;:10,&quot;scale&quot;:2,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;8356cc2beff4e00042878e60a90a8e16&quot;}]">
+    </annotations>
+    <outputs xmi:id="17add17827cf0666dec15b0079218d64" name="TrainingData">
+      <attributes xmi:id="c71622fdd2dade261daf0b470118b45c" name="SalesOrderID" type="NVARCHAR" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="f6a9f5f5f808595a505307e333461b70" name="OrderDate" type="DATE" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="5084807a85c0445bd35b87b54a952acc" name="CustomerName" type="NVARCHAR" nullable="true" length="20">
+      </attributes>
+      <attributes xmi:id="8356cc2beff4e00042878e60a90a8e16" name="SalesEuro" type="DECIMAL" nullable="true" length="10" scale="2">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="553ae1240dcfeba043b596f75774966d" xsi:type="flowgraph:DataNode" name="SalesTable1" truncateTable="false" catalogObjectName="DataWareHouse.Database.Tables::SalesTable1" type="DATABASE_TABLE" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="c975b603ce7e85bd4355400aef384cd3">
+      <annotations xmi:id="5b8f82bd5c45683cb7aca9f521be92c1" key="x" value="391">
+      </annotations>
+      <annotations xmi:id="468ad692e771657ba8b336ed1c3c4548" key="y" value="204">
+      </annotations>
+      <annotations xmi:id="a647c20eb6d8887fc889fdb994c4529d" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="30f30d7907c10d5abbb844a3eee0923a" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="acffcaac607398a89186cce301977514" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="35df0b4e46bb7d2dc3bb7e6b265738e7" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="998d2e40e57f3d4d445af1756522192b" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="eaf6ded1f14e5f5d32baf8a4d8f3b8f8" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="79b260147b4f2877844acb17583e35de" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="e2a04dbb60a41f48537b1d3d0790f2e0" key="columns" value="[{&quot;name&quot;:&quot;SalesOrderID&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;272934de9925b5caca806b3eb73688a4&quot;},{&quot;name&quot;:&quot;OrderDate&quot;,&quot;type&quot;:&quot;DATE&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;9a9452c1255259d60b35b3557b5f739c&quot;},{&quot;name&quot;:&quot;CustomerName&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:20,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;37c66c35f1d1eb5a4eb6a372ae31bfea&quot;},{&quot;name&quot;:&quot;SalesEuro&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;length&quot;:10,&quot;scale&quot;:2,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;ab85c480e0460b6520271d7f75902bd2&quot;}]">
+    </annotations>
+    <inputs xmi:id="07d3f02743ccf553be32774e4c4d6afa" name="SalesTable1" kind="TABLE">
+      <attributes xmi:id="272934de9925b5caca806b3eb73688a4" name="SalesOrderID" type="NVARCHAR" nullable="true" length="10">
+        <annotations xmi:id="84e33ffeb46b39304896f3a20cdc457e" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="9a9452c1255259d60b35b3557b5f739c" name="OrderDate" type="DATE" nullable="true" length="10">
+        <annotations xmi:id="c59beb04d8893ea0c3c737acc3775906" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="37c66c35f1d1eb5a4eb6a372ae31bfea" name="CustomerName" type="NVARCHAR" nullable="true" length="20">
+        <annotations xmi:id="f305c5654131acf3d3c1886ee003e10b" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ab85c480e0460b6520271d7f75902bd2" name="SalesEuro" type="DECIMAL" nullable="true" length="10" scale="2">
+        <annotations xmi:id="4a30db736cd5e8df797b9cc1651e1454" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+</flowgraph:ContainerNode>

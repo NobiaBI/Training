@@ -5,5 +5,5 @@ entity SalesTable2 {
         OrderDate    : LocalDate;
         CustomerName : String(20);
         SalesEuro    : Decimal(10, 2);
-        BigSalesFlag : String(1);
+        BigSaleFlag  : String(1);
 };

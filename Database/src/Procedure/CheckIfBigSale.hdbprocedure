@@ -1,0 +1,15 @@
+PROCEDURE "DataWareHouse.Database.Procedure::CheckIfBigSale"
+(in i1 "DataWareHouse.Database.Procedure::ProcIn", out o1 "DataWareHouse.Database.Procedure::ProcOut")
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************,
+       Write your procedure logic 
+   *************************************/
+	o1 = select * , case when "SalesEuro" >= 8000 then 'Y' else 'N'
+	END as "BigSaleFlag"
+	from :i1;   
+   
+END
